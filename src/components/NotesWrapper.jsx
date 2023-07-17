@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function Note(props) {
@@ -17,5 +18,13 @@ function Note(props) {
         </div>
     )
 }
+
+// Añade esta línea al final de tu archivo
+Note.propTypes = {
+  onDelete: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
 
 export default Note;

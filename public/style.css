@@ -1,24 +1,26 @@
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-color: white;
-    margin: auto -16px;
-    padding: 16px 32px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+  background-color: white;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    font-family: "McLaren", cursive;
-    font-size: 2.4rem;
-    font-weight: 200;
-    color: #333;
+  font-family: "McLaren", cursive;
+  font-size: 2.4rem;
+  font-weight: 200;
+  color: #333;
 }

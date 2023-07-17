@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Fab } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 
@@ -52,5 +53,9 @@ function CreateArea(props) {
         </div>
     )
 }
+
+CreateArea.propTypes = {
+  onAdd: PropTypes.func.isRequired,
+};
 
 export default CreateArea;
