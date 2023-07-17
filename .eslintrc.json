@@ -12,13 +12,8 @@
       "jsx": true
     }
   },
-  "extends": [
-    "react-app",
-    "plugin:react/recommended"
-  ],
-  "plugins": [
-    "react"
-  ],
+  "extends": ["react-app"],
+  "plugins": ["react"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-shadow": "off",
@@ -28,10 +23,7 @@
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "off"
   },
-  "ignorePatterns": [
-    "dist/",
-    "build/"
-  ],
+  "ignorePatterns": ["dist/", "build/"],
   "settings": {
     "react": {
       "version": "detect"
