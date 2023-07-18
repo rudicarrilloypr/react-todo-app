@@ -1,73 +1,60 @@
-html {
-  font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'San Francisco', sans-serif;
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle farthest-corner at 22.4% 21.7%, rgba(4, 189, 228, 1) 0%, rgba(2, 83, 185, 1) 100.2%);
 }
 
 form.create-note {
   position: relative;
-  width: 500px;
-  margin: 30px auto 20px auto;
-  background-color: white;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  width: 30%; /* Usa porcentajes para adaptar el formulario al tamaño de la pantalla */
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px; /* Un radio de borde más grande para un diseño más suave */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
 }
 
 form.create-note input,
 form.create-note textarea {
   width: 100%;
   border: none;
-  padding: 4px;
+  padding: 1rem;
   outline: none;
   font-family: inherit;
   font-size: 1.6rem;
   resize: none;
+  margin-bottom: 1rem;
 }
 
 .note button {
   position: relative;
   float: right;
-  margin-right: 10px;
-  color: red;
+  margin-right: 1rem;
+  color: rgb(170, 170, 170);
   border: none;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: auto;
   cursor: pointer;
   outline: none;
+  background: none;
 }
 
 form.create-note button {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   position: absolute;
-  right: -18px;
-  bottom: -18px;
+  right: -24px;
+  bottom: -24px;
   border: none;
-  background-color: midnightblue;
+  background-color: #007aff;
   font-size: 2.4rem;
   cursor: pointer;
   outline: none;
   color: white;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-form.create-note button:hover {
-  background-color: #1a1a1a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .notes__wrapper {
@@ -76,38 +63,33 @@ form.create-note button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 1rem;
 }
 
 .note {
   background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   width: 240px;
-  margin: 16px;
-  float: left;
+  margin: 1rem;
 }
 
 .note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-
-footer p {
-  color: white;
-}
-
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  color: #333;
 }

@@ -8,19 +8,23 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'San Francisco', sans-serif; /* Font principal de Apple */
+}
+
+body {
+  background: #f5f5f7; /* Color de fondo suave de Apple */
+  color: #333;
 }
 
 header {
-  background-color: white;
-  margin: auto -16px;
-  padding: 16px 32px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 2rem 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-family: "McLaren", cursive;
+  font-family: 'San Francisco', sans-serif;
   font-size: 2.4rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #333;
 }

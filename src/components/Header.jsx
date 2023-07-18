@@ -1,12 +1,10 @@
 import React from 'react';
-import HighlightIcon from '@mui/icons-material/Highlight';
+import AppleIcon from '@mui/icons-material/Apple';
 
-const Header = () => {
+export default function Header() {
     return (
         <header>
-            <h1><HighlightIcon /> To-Do List</h1>
+            <h1><AppleIcon fontSize="large" /> To-Do List</h1>
         </header>
     );
 }
-
-export default Header;

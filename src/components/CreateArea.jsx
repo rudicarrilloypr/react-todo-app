@@ -1,57 +1,56 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useReducer } from "react";
+import PropTypes from "prop-types";
 import { Fab } from "@mui/material";
-import AddIcon from '@mui/icons-material/Add';
+import PlaylistAddCircleIcon from '@mui/icons-material/PlaylistAddCircle';
 
-function CreateArea(props) {
-    const [note, setNote] = useState({
-        title: "",
-        content: ""
-    });
+const initialState = {
+  title: "",
+  content: "",
+};
 
-    function handleChange(e){
-        const { name, value } = e.target;
-        setNote(prevNote => {
-            return {
-                ...prevNote,
-                [name]: value
-            };
-        });
-    }
+function reducer(state, { field, value }) {
+  return {
+    ...state,
+    [field]: value,
+  };
+}
 
-    function submitNote(e) {
-        props.onAdd(note);
-        setNote({
-            title: "",
-            content: ""
-        });
-        e.preventDefault();
-    }
+function CreateArea({ onAdd }) {
+  const [note, dispatch] = useReducer(reducer, initialState);
 
-    return(
-        <div className="print-area">
-            <form className="create-note">
-                <input
-                    type="text"
-                    name="title"
-                    onChange={handleChange}
-                    value={note.title}
-                    placeholder="Title"
-                />
+  const handleChange = (e) =>
+    dispatch({ field: e.target.name, value: e.target.value });
 
-                <textarea
-                    name="content"
-                    rows="3"
-                    onChange={handleChange}
-                    value={note.content}
-                    placeholder="Take a note..."
-                />
-                <Fab onClick={submitNote}>
-                    <AddIcon />
-                </Fab>
-            </form>
-        </div>
-    )
+  const submitNote = (e) => {
+    e.preventDefault();
+    onAdd(note);
+    dispatch({ field: "title", value: "" });
+    dispatch({ field: "content", value: "" });
+  };
+
+  return (
+    <div className="print-area">
+      <form className="create-note" onSubmit={submitNote}>
+        <input
+          type="text"
+          name="title"
+          onChange={handleChange}
+          value={note.title}
+          placeholder="Title"
+        />
+        <textarea
+          name="content"
+          rows="3"
+          onChange={handleChange}
+          value={note.content}
+          placeholder="Take a note..."
+        />
+        <Fab type="submit">
+          <PlaylistAddCircleIcon />
+        </Fab>
+      </form>
+    </div>
+  );
 }
 
 CreateArea.propTypes = {
