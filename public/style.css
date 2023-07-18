@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'San Francisco', sans-serif; /* Font principal de Apple */
+}
+
+body {
+  background: #f5f5f7; /* Color de fondo suave de Apple */
+  color: #333;
+}
+
+header {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-family: 'San Francisco', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #333;
+}

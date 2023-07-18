@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+body {
+  height: 100vh;
+  font-family: 'San Francisco', sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form.create-note {
+  position: relative;
+  width: 30%; /* Usa porcentajes para adaptar el formulario al tamaño de la pantalla */
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px; /* Un radio de borde más grande para un diseño más suave */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  resize: none;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 1rem;
+  color: rgb(170, 170, 170);
+  border: none;
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  outline: none;
+  background: none;
+}
+
+form.create-note button {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: -24px;
+  bottom: -24px;
+  border: none;
+  background-color: #007aff;
+  font-size: 2.4rem;
+  cursor: pointer;
+  outline: none;
   color: white;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.notes__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 240px;
+  margin: 1rem;
+}
+
+.note h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  color: #333;
 }
